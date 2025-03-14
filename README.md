@@ -30,3 +30,32 @@ Response:
 ```bash
 Hello John
 ```
+
+### Accessing Swagger Documentation
+
+To access the Swagger documentation for the API, navigate to the following URL in your web browser:
+
+http://localhost:8080/swagger/index.html
+
+This will display the Swagger UI, allowing you to interact with and test the API endpoints.
+
+### Setting Up Swagger
+
+To set up Swagger for your project, follow these steps:
+
+1. **Install the `swag` CLI tool**:
+   ```sh
+   go install github.com/swaggo/swag/cmd/swag@latest
+   export PATH=$PATH:$(go env GOPATH)/bin
+   source ~/.zshrc
+   ```
+
+2. **Install the necessary packages**:
+   ```sh
+   go get github.com/swaggo/http-swagger
+   ```
+
+3. **Generate the Swagger documentation**:
+   ```sh
+   swag init
+   ```
